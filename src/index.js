@@ -1,17 +1,33 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+
+/* // 2-hooking-it-up-with-react
+import './2-hooking-it-up-with-react/index.scss';
+import Application from './2-hooking-it-up-with-react/Application';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+	<React.StrictMode>
+		<Application />
+	</React.StrictMode>,
+	document.getElementById('root')
+); */
+
+// 3-connecting-redux-to-react
+import { Theme } from '@twilio-paste/core/theme';
+import { Provider } from 'react-redux';
+
+import Application from './3-connection-redux-to-react/Application';
+import { store } from './3-connection-redux-to-react/store/index';
+
+import './3-connection-redux-to-react/index.css';
+
+ReactDOM.render(
+  <Provider store={store}>
+    <Theme.Provider theme="default">
+      <React.StrictMode>
+        <Application />
+      </React.StrictMode>
+    </Theme.Provider>
+  </Provider>,
   document.getElementById('root')
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
