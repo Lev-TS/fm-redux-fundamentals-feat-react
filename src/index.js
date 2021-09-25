@@ -12,14 +12,14 @@ ReactDOM.render(
 	document.getElementById('root')
 ); */
 
-// 3-connecting-redux-to-react
+// 3 - 5
 import { Theme } from '@twilio-paste/core/theme';
 import { Provider } from 'react-redux';
 
-import Application from './3-connection-redux-to-react/Application';
-import { store } from './3-connection-redux-to-react/store/index';
+import Application from './4-selectors-and-reselect/Application';
+import { store } from './4-selectors-and-reselect/store/index';
 
-import './3-connection-redux-to-react/index.css';
+import './4-selectors-and-reselect/index.css';
 
 ReactDOM.render(
   <Provider store={store}>
